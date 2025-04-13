@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MY CARD</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white dark:bg-gray-900">
+  <main class="min-h-screen flex items-center justify-center sm:p-4">
+    <section>
+      <article class="p-6 bg-gray-800 shadow-2xl rounded-xl">
+
+        <figure class="">
+           <img 
+            src="C:\Users\HP\Desktop\My work\IMG-20250104-WA0013.jpg" 
+            alt="my photo" 
+            class="rounded-full w-24 sm:w-32 md:w-40 h-24 sm:h-32 md:h-40 object-cover border-4 shadow-2xl"
+        </img>
+          <figcaption class="mt-2 text-sm text-gray-400 font-mono">My Photo</figcaption>
+        </figure>
+
+          <h1 class="text-lg sm:text-xl md:text-2xl font-mono text-white">MUGENI Giramata Aliane</h1>
+          <p class="text-blue-400 font-mono text-sm">Frontend & Backend Developer</p>
+          <address class="text-gray-300 text-sm font-mono">
+            Kigali, Rwanda
+          </address>
+          <time datetime="2025-04-12">
+            <p class="sm:text-xs text-gray-400 font-mono">Last updated: April 12, 2025</p>
+          </time>
+  
+          
+          <blockquote id="quote" class="text-gray-200 sm:text-sm font-mono"></blockquote>
+      
+        
+        <div id="toggleBtn" >
+          <button 
+          class="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-200 rounded-full font-mono animate-bounce">
+          More About Me
+        </button>
+
+        </div>
+        
+        
+        <div id="aboutme" class="hidden text-left w-full mt-4 text-sm sm:text-base">
+          <ul class="space-y-2 text-white font-mono">
+            <li><strong>General Skills:</strong> Self-Motivation, Time Management & Communication.</li>
+            <li><strong>Workplace Skills:</strong> Writing, Reading, Collaboration & Digital Skills.</li>
+            <li><strong>Career Focus:</strong> Currently learning React, Tailwind & Javascript.</li>
+            <li><strong>Hobbies:</strong>Drowing Comics, Sleeping, Coding, watch movie & Eating fast food.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const toggleBtn = document.getElementById("toggleBtn");
+    const moreContent = document.getElementById("aboutme");
+
+    toggleBtn.addEventListener("click", () => {
+      moreContent.classList.toggle("hidden");
+    });
+
+    const quotes = [
+      "Keep Going!",
+      "Character is power!",
+      "Stay Focused!",
+      "Never Give Up!",
+      
+
+    ];
+    document.getElementById("quote").textContent = 
+      quotes[Math.floor(Math.random() * quotes.length)];
+  </script>
+</body>
+</html>
